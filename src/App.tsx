@@ -1,13 +1,14 @@
-import React from 'react';
-import './App.css';
-import {TablePermission} from './tables/permission';
+import { useState } from 'react'
+import './App.css'
+import { TablePermission } from './component/table/permission'
+
 
 function App() {
   return (
     <div className="App">
-      <TablePermission></TablePermission>
+      <TablePermission/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

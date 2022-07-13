@@ -1,8 +1,8 @@
 import { useState, useEffect} from "react";
 import MUIDataTable from "mui-datatables";
 import axios from "axios";
-import { PermissionRequest } from "../repository/model/request/dist/permissionRequest";
-import { Responses } from "../repository/model/Responses";
+import { Permission } from "../../models/entities/permission";
+import { Responses } from "../../models/entities/response";
 const options: any = {
     filterType: 'checkbox',
 };
@@ -13,7 +13,7 @@ export const TablePermission = () => {
     //show data whit axios
     const urlBase = "https://localhost:44314"
     const getPermission = "/api/Permission"
-    const res : Responses<typeof PermissionRequest> = {} as any
+    const res : Responses<Permission> = {} as any
     //define columns
     const result = async () => {
         await axios.get(urlBase+getPermission).then((response)=>{
