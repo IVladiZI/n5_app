@@ -1,6 +1,6 @@
 export interface Permission{
-    Id : number
-    Name : string
-    LastName : string
-    TyperPermission : string
+    id : number
+    name : string
+    lastName : string
+    idTypePermission : number
 }
